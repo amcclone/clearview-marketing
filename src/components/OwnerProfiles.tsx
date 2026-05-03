@@ -1,0 +1,53 @@
+const profiles = [
+  {
+    emoji: '💪',
+    label: 'The Grinder',
+    tagline: 'Head down, running hard, no time to zoom out.',
+    desc: "ClearView gives you the visibility you've never had — so you can finally work on the business, not just in it.",
+  },
+  {
+    emoji: '🚀',
+    label: 'The Grower',
+    tagline: 'Ready to scale but not sure where to push.',
+    desc: 'ClearView shows you exactly where the leverage is so every dollar and hour goes toward real growth.',
+  },
+  {
+    emoji: '🎯',
+    label: 'The Planner',
+    tagline: 'Not selling tomorrow, but want to be ready when it makes sense.',
+    desc: "ClearView builds your enterprise value every single day — so when the right moment comes, you're in control.",
+  },
+]
+
+export function OwnerProfiles() {
+  return (
+    <section className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
+          Built for owners like you
+        </h2>
+        <p className="text-slate-400 text-center max-w-xl mx-auto mb-16 text-lg">
+          For owners of service and specialty businesses doing $1M–$20M in revenue — wherever you are in your journey.
+        </p>
+
+        <div className="grid sm:grid-cols-3 gap-6">
+          {profiles.map((p, i) => (
+            <div
+              key={i}
+              className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-sky-500/30 transition"
+            >
+              <div className="text-5xl mb-4">{p.emoji}</div>
+              <h3 className="text-white font-bold text-xl mb-1">{p.label}</h3>
+              <p className="text-sky-400 text-sm font-medium mb-3">{p.tagline}</p>
+              <p className="text-slate-400 text-sm leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-center text-slate-500 text-sm mt-10">
+          Works across trades, environmental services, logistics, landscaping, specialty contractors, and beyond.
+        </p>
+      </div>
+    </section>
+  )
+}
