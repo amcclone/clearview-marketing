@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — ClearView</title>
+    <meta name="description" content="ClearView privacy policy: what we collect, how we use it, and your rights." />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0a0f1e;
+        --text: #ffffff;
+        --muted: #94a3b8;
+        --dim: #64748b;
+        --accent: #38bdf8;
+        --rule: rgba(255, 255, 255, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+      header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 56px; }
+      .brand { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+      .logo {
+        width: 28px; height: 28px;
+        background: var(--accent); border-radius: 8px;
+        display: inline-flex; align-items: center; justify-content: center;
+        color: white; font-weight: 700; font-size: 12px;
+      }
+      .brand span { color: var(--text); font-weight: 600; letter-spacing: -0.01em; }
+      .home-link { color: var(--muted); text-decoration: none; font-size: 14px; }
+      .home-link:hover { color: var(--accent); }
+      h1 {
+        font-size: 40px; font-weight: 800; letter-spacing: -0.02em;
+        margin: 0 0 8px;
+      }
+      .updated { color: var(--dim); font-size: 14px; margin-bottom: 40px; }
+      h2 {
+        font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
+        margin: 40px 0 12px; color: var(--text);
+      }
+      p, li { color: var(--muted); }
+      a { color: var(--accent); }
+      a:hover { text-decoration: underline; }
+      ul { padding-left: 20px; }
+      footer {
+        margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--rule);
+        color: var(--dim); font-size: 13px; text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="/">
+          <span class="logo">CV</span>
+          <span>ClearView</span>
+        </a>
+        <a class="home-link" href="/">← Back to home</a>
+      </header>
+
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 2026-05-05</p>
+
+      <h2>What we collect</h2>
+      <p>The only personal information we collect on this site is your email address, which you provide voluntarily by joining the ClearView beta waitlist.</p>
+
+      <h2>How we use it</h2>
+      <p>We use your email address to notify you when the ClearView beta opens and to send occasional product updates related to the launch.</p>
+
+      <h2>Who we share it with</h2>
+      <p>We do not sell or share your email with anyone, except for the service providers necessary to operate the waitlist:</p>
+      <ul>
+        <li><strong>Supabase</strong> — stores the waitlist database.</li>
+        <li><strong>Resend</strong> — delivers confirmation and update emails.</li>
+      </ul>
+
+      <h2>Your rights</h2>
+      <p>You can ask us to delete your data at any time by emailing <a href="mailto:hello@clearview.example">hello@clearview.example</a>. <em>(Aaron — replace this placeholder address before launch.)</em></p>
+
+      <h2>Changes</h2>
+      <p>We may update this policy as ClearView evolves. The "Last updated" date above will reflect the most recent revision.</p>
+
+      <footer>© <span id="year"></span> ClearView. All rights reserved.</footer>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

@@ -1,32 +1,37 @@
 import { useState } from 'react'
-import { supabase } from '../lib/supabase'
 
 export function WaitlistForm({ variant = 'hero' }: { variant?: 'hero' | 'bottom' }) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+  const [alreadyOnList, setAlreadyOnList] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
     setStatus('loading')
     setErrorMsg('')
+    setAlreadyOnList(false)
 
-    const { error } = await supabase
-      .from('beta_waitlist')
-      .insert([{ email: email.toLowerCase().trim(), source: variant }])
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.toLowerCase().trim(), source: variant }),
+      })
+      const data = (await res.json()) as { ok: boolean; alreadyOnList?: boolean; error?: string }
 
-    if (error) {
-      if (error.code === '23505') {
-        setErrorMsg("You're already on the list! We'll be in touch.")
-        setStatus('error')
+      if (data.ok) {
+        setAlreadyOnList(Boolean(data.alreadyOnList))
+        setStatus('success')
+        setEmail('')
       } else {
-        setErrorMsg('Something went wrong. Please try again.')
+        setErrorMsg(data.error ?? 'Something went wrong. Please try again.')
         setStatus('error')
       }
-    } else {
-      setStatus('success')
-      setEmail('')
+    } catch {
+      setErrorMsg('Network error. Please try again.')
+      setStatus('error')
     }
   }
 
@@ -34,7 +39,11 @@ export function WaitlistForm({ variant = 'hero' }: { variant?: 'hero' | 'bottom'
     return (
       <div className="flex items-center gap-3 bg-green-500/10 border border-green-500/30 rounded-xl px-6 py-4 text-green-400 font-medium">
         <span className="text-2xl">🎉</span>
-        <span>You're in! We'll reach out when beta opens.</span>
+        <span>
+          {alreadyOnList
+            ? "You're already on the list — we'll reach out when beta opens."
+            : "You're in! We'll reach out when beta opens."}
+        </span>
       </div>
     )
   }

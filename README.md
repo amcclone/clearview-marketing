@@ -18,7 +18,7 @@ ClearView marketing site — landing page + beta waitlist capture.
 
 ## Supabase Migration
 
-Run `supabase/migrations/001_beta_waitlist.sql` in the Supabase SQL editor to create the waitlist table.
+Schema for `beta_waitlist` lives in the main [clearview](https://github.com/amcclone/clearview) repo at `supabase/migrations/022_beta_waitlist.sql`. Apply it from there in the Supabase SQL editor. This repo is a frontend consumer and does not own schema.
 
 ## Env Vars (set in Vercel dashboard too)
 - `VITE_SUPABASE_URL`

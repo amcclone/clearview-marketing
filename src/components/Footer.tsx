@@ -7,6 +7,11 @@ export function Footer() {
         </div>
         <span className="text-slate-400 font-medium">ClearView</span>
       </div>
+      <nav className="flex items-center justify-center gap-4 mb-3 text-sm">
+        <a href="/privacy.html" className="text-slate-500 hover:text-sky-400 transition">Privacy</a>
+        <span className="text-slate-700">·</span>
+        <a href="/terms.html" className="text-slate-500 hover:text-sky-400 transition">Terms</a>
+      </nav>
       <p className="text-slate-600 text-sm">
         © {new Date().getFullYear()} ClearView. All rights reserved.
       </p>
