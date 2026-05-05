@@ -1,6 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 
+export const config = { runtime: 'edge' }
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const CONFIRMATION_TEXT = `Thanks for reserving your spot.
@@ -50,6 +52,7 @@ export default async function handler(request: Request): Promise<Response> {
 
   let alreadyOnList = false
   if (error) {
+    console.error(error)
     if (error.code === '23505') {
       alreadyOnList = true
     } else {
