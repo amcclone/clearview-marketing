@@ -1,6 +1,6 @@
 # clearview-marketing
 
-ClearView marketing site — landing page + beta waitlist capture.
+Galvern marketing site — landing page + beta waitlist capture.
 
 **Live:** TBD (Vercel)
 **Main app:** [clearview](https://github.com/amcclone/clearview)

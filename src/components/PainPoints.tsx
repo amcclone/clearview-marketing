@@ -9,7 +9,7 @@ const pains = [
   },
   {
     icon: '⚡',
-    text: "When growth stalls — or a buyer calls — you're not ready.",
+    text: "You can't tell which of today's hustle actually compounds into value.",
   },
 ]
 
@@ -24,7 +24,7 @@ export function PainPoints() {
           {pains.map((p, i) => (
             <div
               key={i}
-              className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-center hover:border-sky-500/30 transition"
+              className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-center hover:border-copper-500/30 transition"
             >
               <div className="text-4xl mb-4">{p.icon}</div>
               <p className="text-slate-300 text-base leading-relaxed">{p.text}</p>

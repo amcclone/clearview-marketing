@@ -3,19 +3,19 @@ const profiles = [
     emoji: '💪',
     label: 'The Grinder',
     tagline: 'Head down, running hard, no time to zoom out.',
-    desc: "ClearView gives you the visibility you've never had — so you can finally work on the business, not just in it.",
+    desc: "Galvern gives you the visibility you've never had — so you can finally work on the business, not just in it.",
   },
   {
     emoji: '🚀',
     label: 'The Grower',
     tagline: 'Ready to scale but not sure where to push.',
-    desc: 'ClearView shows you exactly where the leverage is so every dollar and hour goes toward real growth.',
+    desc: 'Galvern shows you exactly where the leverage is so every dollar and hour goes toward real growth.',
   },
   {
     emoji: '🎯',
     label: 'The Planner',
-    tagline: 'Not selling tomorrow, but want to be ready when it makes sense.',
-    desc: "ClearView builds your enterprise value every single day — so when the right moment comes, you're in control.",
+    tagline: 'Not selling tomorrow — but compounding value every day until you do.',
+    desc: 'Galvern builds your enterprise value every single day — so the business is always worth more tomorrow than today.',
   },
 ]
 
@@ -34,11 +34,11 @@ export function OwnerProfiles() {
           {profiles.map((p, i) => (
             <div
               key={i}
-              className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-sky-500/30 transition"
+              className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-copper-500/30 transition"
             >
               <div className="text-5xl mb-4">{p.emoji}</div>
               <h3 className="text-white font-bold text-xl mb-1">{p.label}</h3>
-              <p className="text-sky-400 text-sm font-medium mb-3">{p.tagline}</p>
+              <p className="text-copper-500 text-sm font-medium mb-3">{p.tagline}</p>
               <p className="text-slate-400 text-sm leading-relaxed">{p.desc}</p>
             </div>
           ))}

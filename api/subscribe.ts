@@ -7,11 +7,11 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const CONFIRMATION_TEXT = `Thanks for reserving your spot.
 
-ClearView is being built for owner-operators of service businesses doing $1M-$20M who want to run the daily work AND build the company's value at the same time. We'll be in touch when the beta opens.
+Galvern is being built for owner-operators of service businesses doing $1M-$20M who want to run the daily work AND build the company's value at the same time. We'll be in touch when the beta opens.
 
 No action needed from you right now.
 
-— The ClearView team
+— The Galvern team
 `
 
 export default async function handler(request: Request): Promise<Response> {
@@ -65,9 +65,9 @@ export default async function handler(request: Request): Promise<Response> {
     try {
       const resend = new Resend(resendKey)
       await resend.emails.send({
-        from: 'ClearView <onboarding@resend.dev>',
+        from: 'Galvern <onboarding@resend.dev>',
         to: email,
-        subject: "You're on the ClearView beta list",
+        subject: "You're on the Galvern beta list",
         text: CONFIRMATION_TEXT,
       })
     } catch (e) {

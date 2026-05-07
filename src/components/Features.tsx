@@ -6,8 +6,8 @@ const features = [
   },
   {
     icon: '📊',
-    title: 'M&A Readiness Score',
-    desc: 'Always know where you stand across financials, operations, and growth metrics — and exactly what to improve.',
+    title: 'Readiness Score',
+    desc: 'Always know where you stand across financials, operations, and growth — and exactly what to improve.',
   },
   {
     icon: '📈',
@@ -29,17 +29,17 @@ export function Features() {
           One platform. Every angle covered.
         </h2>
         <p className="text-slate-400 text-center max-w-xl mx-auto mb-16 text-lg">
-          ClearView connects your operations, financials, and strategic position into a single clear picture.
+          Galvern connects your operations, financials, and value drivers into a single clear picture.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6">
           {features.map((f, i) => (
             <div
               key={i}
-              className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-sky-500/30 transition group"
+              className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-copper-500/30 transition group"
             >
               <div className="text-4xl mb-4">{f.icon}</div>
-              <h3 className="text-white font-semibold text-xl mb-2 group-hover:text-sky-400 transition">
+              <h3 className="text-white font-semibold text-xl mb-2 group-hover:text-copper-500 transition">
                 {f.title}
               </h3>
               <p className="text-slate-400 leading-relaxed">{f.desc}</p>
