@@ -31,8 +31,8 @@ export function Hero() {
 
         {/* Sub */}
         <p className="text-xl sm:text-2xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Galvern is the operating platform for owner-operators of $1M–$20M service
-          businesses. The daily work that compounds into a more valuable company.
+          Most operators don't know what their business is worth — or what's holding it back.
+          Galvern shows you both. Every day, from real data.
         </p>
 
         <div className="flex flex-col items-center gap-3">
