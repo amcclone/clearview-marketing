@@ -10,11 +10,8 @@ export function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Wordmark */}
-        <div className="flex items-center justify-center gap-2 mb-10">
-          <div className="w-8 h-8 bg-copper-500 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">G</span>
-          </div>
-          <span className="text-white font-semibold text-lg tracking-tight">Galvern</span>
+        <div className="flex items-center justify-center mb-10">
+          <img src="/galvern-logo.png" alt="Galvern" className="h-8 md:h-10 w-auto" />
         </div>
 
         {/* Badge */}
