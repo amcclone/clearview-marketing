@@ -5,6 +5,11 @@ const features = [
     desc: 'Manage and monitor the health of your business in one place — SOPs, checklists, training, and team accountability.',
   },
   {
+    icon: '🔭',
+    title: 'Full Picture',
+    desc: "Your QuickBooks doesn't talk to your field service software. Galvern connects them — revenue by job type, margin by tech, cash by week — all in one place, not five windows.",
+  },
+  {
     icon: '📊',
     title: 'Readiness Score',
     desc: 'Always know where you stand across financials, operations, and growth — and exactly what to improve.',
@@ -26,7 +31,7 @@ export function Features() {
     <section className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
-          One platform. Every angle covered.
+          One platform. One picture.
         </h2>
         <p className="text-slate-400 text-center max-w-xl mx-auto mb-16 text-lg">
           Galvern connects your operations, financials, and value drivers into a single clear picture.
