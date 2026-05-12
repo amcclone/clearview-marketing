@@ -11,7 +11,7 @@ export function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Wordmark */}
         <div className="flex items-center justify-center mb-10">
-          <img src="/galvern-logo.png" alt="Galvern" className="h-8 md:h-10 w-auto" />
+          <img src="/galvern-logo.png" alt="Galvern" className="h-24 md:h-32 w-auto" />
         </div>
 
         {/* Badge */}
